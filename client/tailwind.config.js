@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
@@ -16,6 +18,9 @@ module.exports = {
         linkedin: "#2867B2",
         twitter: "#1DA1F2",
         facebook: "#4267B2",
+      },
+      fontFamily:{
+        sans: ["'Nunito'", ...defaultTheme.fontFamily.sans],
       },
     },
   },
