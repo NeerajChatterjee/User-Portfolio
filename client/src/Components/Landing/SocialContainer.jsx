@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faFacebook, faLinkedin, faInstagram, faDiscord, faSpotify, faTwitter, faSlack, faTelegram, faTelegramPlane, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
-import { faBlog, faEnvelope, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faFacebook, faLinkedin, faInstagram, faDiscord, faSpotify, faTwitter, faSlack, faTelegramPlane, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons';
+import { faBlog, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function SocialContainer() {
   return (
