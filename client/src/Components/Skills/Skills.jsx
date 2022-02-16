@@ -5,6 +5,7 @@ import SkillsContainer from './SkillsContainer'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt, faCoins } from "@fortawesome/free-solid-svg-icons";
 import ProficiencyContainer from './ProficienyContainer'
+import OtherSkillsContainer from "./OtherSkillsContainer";
 
 export default function Skills() {
 
@@ -33,36 +34,42 @@ export default function Skills() {
   }, [])
 
   return (
-    <div className="flex flex-col w-full h-full p-4">
-      <div className="flex justify-center py-4 text-4xl font-extrabold">
+    <div className="flex flex-col w-full h-full p-4 sm:p-8">
+      <div className="flex justify-center py-4 text-4xl font-extrabold sm:py-8 sm:text-5xl lg:text-6xl">
         SKILLS &nbsp;
-        <FontAwesomeIcon icon={faBolt} className="text-[#2563eb]" />
+        <FontAwesomeIcon icon={faBolt} className="text-[#2563eb] animate-pulse" />
       </div>
-      <div className="flex flex-col">
-        <div className="containerSkills" ref={containerSkills}></div>
-        <div className="flex flex-col">
+      <div className="flex flex-col md:grid md:grid-cols-2 lg:mt-16">
+        <div
+          className="max-w-xl containerSkills m-auto md:m-0 xl:max-w-6xl"
+          ref={containerSkills}
+        ></div>
+        <div className="flex flex-col justify-center">
           <div className="flex flex-col">
-            <div className="flex justify-center text-2xl font-normal text-gray-500">
+            <div className="flex justify-center text-2xl sm:text-3xl xl:text-4xl font-normal text-gray-500">
               Worked with
             </div>
             <SkillsContainer />
           </div>
           <div className="flex flex-col">
-            <div className="flex justify-start text-2xl font-normal text-gray-500">
+            <div className="flex justify-start text-2xl sm:text-3xl xl:text-4xl font-normal text-gray-500">
               Proficient in:
             </div>
             <ProficiencyContainer />
           </div>
         </div>
       </div>
-      <div className="flex flex-col">
-        <div className="flex justify-center py-4 text-2xl font-bold">
+      <div className="flex flex-col mt-4 sm:mt-8 md:mt-12">
+        <div className="flex justify-center py-4 text-2xl sm:text-3xl xl:text-4xl font-bold">
           OTHER SKILLS &nbsp;
           <FontAwesomeIcon icon={faCoins} className="text-[#2563eb]" />
         </div>
-        <div className="flex flex-col">
-          <div className="otherSkillsContainer" ref={otherSkillsContainer}></div>
-          <div>Content</div>
+        <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-center">
+          <div
+            className="otherSkillsContainer max-w-xl m-auto md:m-0 xl:max-w-6xl"
+            ref={otherSkillsContainer}
+          ></div>
+          <OtherSkillsContainer />
         </div>
       </div>
     </div>
