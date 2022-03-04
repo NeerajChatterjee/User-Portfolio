@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.tilt-card:hover,
+.tilt-card div:first-child:hover {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.tilt-icon {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) translateZ(60px);
+}
+.tilt-title {
+  transform: translateZ(40px);
+}
+.tilt-description {
+  transform: translateZ(35px);
+}
