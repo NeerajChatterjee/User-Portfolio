@@ -13,7 +13,6 @@ export default function Experience() {
         speed: 300,
         scale: 1.05,
         glare: true,
-        easing: "unset",
         perspective: 1000,
         transition: true,
         easing: "cubic-bezier(.17,.67,.83,.67)",

@@ -41,18 +41,18 @@ export default function Skills() {
       </div>
       <div className="flex flex-col md:grid md:grid-cols-2 lg:mt-16">
         <div
-          className="max-w-xl containerSkills m-auto md:m-0 xl:max-w-6xl"
+          className="max-w-xl m-auto containerSkills md:m-0 xl:max-w-6xl"
           ref={containerSkills}
         ></div>
         <div className="flex flex-col justify-center">
           <div className="flex flex-col">
-            <div className="flex justify-center text-2xl sm:text-3xl xl:text-4xl font-normal text-gray-500">
+            <div className="flex justify-center text-2xl font-normal text-gray-500 sm:text-3xl xl:text-4xl">
               Worked with
             </div>
             <SkillsContainer />
           </div>
           <div className="flex flex-col">
-            <div className="flex justify-start text-2xl sm:text-3xl xl:text-4xl font-normal text-gray-500">
+            <div className="flex justify-start text-2xl font-normal text-gray-500 sm:text-3xl xl:text-4xl">
               Proficient in:
             </div>
             <ProficiencyContainer />
@@ -60,13 +60,13 @@ export default function Skills() {
         </div>
       </div>
       <div className="flex flex-col mt-4 sm:mt-8 md:mt-12">
-        <div className="flex justify-center py-4 text-2xl sm:text-3xl xl:text-4xl font-bold">
+        <div className="flex justify-center py-4 text-2xl font-bold sm:text-3xl xl:text-4xl">
           OTHER SKILLS &nbsp;
           <FontAwesomeIcon icon={faCoins} className="text-[#2563eb]" />
         </div>
         <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-center">
           <div
-            className="otherSkillsContainer max-w-xl m-auto md:m-0 xl:max-w-6xl"
+            className="max-w-xl m-auto otherSkillsContainer md:m-0 xl:max-w-6xl"
             ref={otherSkillsContainer}
           ></div>
           <OtherSkillsContainer />
