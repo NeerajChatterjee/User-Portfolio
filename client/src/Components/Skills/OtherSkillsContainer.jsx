@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBullseye, faFire, faFireAlt, faMicrophone, faMicrophoneAlt, faPen } from '@fortawesome/free-solid-svg-icons';
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 export default function OtherSkillsContainer() {
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-sine",
+      startEvent: "load",
+      once: true,
+    });
+  }, []);
+  
+
   return (
-    <div className="select-none md:w-[40%]">
+    <div className="select-none md:w-[40%]" data-aos="fade-left">
       <div className="flex mt-4 text-lg xl:text-xl xl:py-2 xl:items-center">
         <FontAwesomeIcon
           icon={faPen}

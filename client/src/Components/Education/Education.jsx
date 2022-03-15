@@ -1,20 +1,35 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
-import EducationData from './EducationData';
+import React, { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import EducationData from "./EducationData";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Education() {
+  
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      startEvent: "load",
+      easing: "linear",
+      once: true,
+    });
+  }, []);
+
   return (
     <>
       <div className="flex flex-col py-16 transition duration-1000 transform sm:py-24">
-        <div className="flex justify-center pb-8 text-4xl font-extrabold sm:text-5xl lg:text-6xl">
+        <div
+          className="flex justify-center pb-8 text-4xl font-extrabold sm:text-5xl lg:text-6xl"
+          data-aos="fade-up"
+        >
           EDUCATION &nbsp;
           <FontAwesomeIcon
             icon={faGraduationCap}
             className="text-[#2563eb] animate-bounce "
           />
         </div>
-        <div className="flex flex-col max-w-7xl">
+        <div className="flex flex-col max-w-7xl" data-aos="zoom-in">
           {EducationData.map((data, idx) => {
             return (
               <div className="flex flex-col items-center py-5 text-gray-900 transition duration-1000 transform rounded-3xl lg:flex-row lg:justify-center 2xl:mt-12 lg:hover:translate-x-6 hover:shadow-xl">

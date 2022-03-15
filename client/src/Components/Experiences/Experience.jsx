@@ -1,40 +1,56 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserTie } from '@fortawesome/free-solid-svg-icons';
-import VanillaTilt from 'vanilla-tilt';
-import { useEffect } from 'react';
-import ExperienceData from './ExperienceData'
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserTie } from "@fortawesome/free-solid-svg-icons";
+import VanillaTilt from "vanilla-tilt";
+import { useEffect } from "react";
+import ExperienceData from "./ExperienceData";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Experience() {
-  
-    useEffect(() => {
-      VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
-        max: 20,
-        speed: 300,
-        scale: 1.05,
-        glare: true,
-        perspective: 1000,
-        transition: true,
-        easing: "cubic-bezier(.17,.67,.83,.67)",
-        "max-glare": 0.7,
-        gyroscope: true,
-        gyroscopeMinAngleX: -45,
-        gyroscopeMaxAngleX: 45,
-        gyroscopeMinAngleY: -45,
-        gyroscopeMaxAngleY: 45,
-      });
-    }, []);
+  useEffect(() => {
+    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+      max: 20,
+      speed: 300,
+      scale: 1.05,
+      glare: true,
+      perspective: 1000,
+      transition: true,
+      easing: "cubic-bezier(.17,.67,.83,.67)",
+      "max-glare": 0.7,
+      gyroscope: true,
+      gyroscopeMinAngleX: -45,
+      gyroscopeMaxAngleX: 45,
+      gyroscopeMinAngleY: -45,
+      gyroscopeMaxAngleY: 45,
+    });
+  }, []);
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-sine",
+      startEvent: "load",
+      once: true,
+    });
+  }, []);
 
   return (
     <div className="bg-blue-50">
-      <div className="flex justify-center py-4 text-4xl font-extrabold sm:py-8 sm:text-5xl lg:text-6xl">
+      <div
+        className="flex justify-center py-4 text-4xl font-extrabold sm:py-8 sm:text-5xl lg:text-6xl"
+        data-aos="zoom-in-up"
+      >
         <FontAwesomeIcon
           icon={faUserTie}
           className="text-[#2563eb] animate-pulse"
         />
         &nbsp; EXPERIENCE
       </div>
-      <div className="grid items-center justify-center grid-cols-1 gap-12 px-12 py-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        className="grid items-center justify-center grid-cols-1 gap-12 px-12 py-10 sm:grid-cols-2 lg:grid-cols-3"
+        data-aos="flip-down"
+      >
         {ExperienceData.map((data, id) => (
           <div
             key={id}

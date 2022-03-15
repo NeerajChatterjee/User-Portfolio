@@ -1,6 +1,8 @@
 import React from "react";
 import Lottie from "lottie-web";
 import { useEffect, useRef } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import SkillsContainer from './SkillsContainer'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt, faCoins } from "@fortawesome/free-solid-svg-icons";
@@ -33,9 +35,18 @@ export default function Skills() {
     console.log("Rendered");
   }, [])
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-sine",
+      startEvent: "load",
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="flex flex-col w-full h-full p-4 sm:p-8">
-      <div className="flex justify-center py-4 text-4xl font-extrabold sm:py-8 sm:text-5xl lg:text-6xl">
+      <div className="flex justify-center py-4 text-4xl font-extrabold sm:py-8 sm:text-5xl lg:text-6xl" data-aos="zoom-out-up">
         SKILLS &nbsp;
         <FontAwesomeIcon icon={faBolt} className="text-[#2563eb] animate-pulse" />
       </div>
@@ -43,8 +54,9 @@ export default function Skills() {
         <div
           className="max-w-xl m-auto containerSkills md:m-0 xl:max-w-6xl"
           ref={containerSkills}
+          data-aos="fade-right"
         ></div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center" data-aos="fade-left">
           <div className="flex flex-col">
             <div className="flex justify-center text-2xl font-normal text-gray-500 sm:text-3xl xl:text-4xl">
               Worked with
@@ -60,7 +72,7 @@ export default function Skills() {
         </div>
       </div>
       <div className="flex flex-col mt-4 sm:mt-8 md:mt-12">
-        <div className="flex justify-center py-4 text-2xl font-bold sm:text-3xl xl:text-4xl">
+        <div className="flex justify-center py-4 text-2xl font-bold sm:text-3xl xl:text-4xl" data-aos="flip-down">
           OTHER SKILLS &nbsp;
           <FontAwesomeIcon icon={faCoins} className="text-[#2563eb]" />
         </div>
@@ -68,6 +80,7 @@ export default function Skills() {
           <div
             className="max-w-xl m-auto otherSkillsContainer md:m-0 xl:max-w-6xl"
             ref={otherSkillsContainer}
+            data-aos="fade-right"
           ></div>
           <OtherSkillsContainer />
         </div>

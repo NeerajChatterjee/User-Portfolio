@@ -3,6 +3,8 @@ import React from "react";
 import {useState, useEffect, useRef} from 'react'
 import ProjectsData from "./MyProjectsData";
 import { faFileCode } from "@fortawesome/free-solid-svg-icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -28,12 +30,25 @@ function MyProjects() {
         else setCount(1);
         // console.log(count);
     }, 1000)
+
+    useEffect(() => {
+      Aos.init({
+        duration: 1000,
+        easing: "ease-in-sine",
+        startEvent: "load",
+        once: true,
+      });
+    }, []);
+    
     
 
   return (
     <>
       <div className="px-10 py-10 mx-auto bg-gray-900 sm:p-12 md:p-20">
-        <div className="flex items-center justify-center pb-12 text-4xl font-extrabold sm:pb-14 sm:text-5xl lg:pb-16 lg:text-6xl text-[#2563eb]">
+        <div
+          className="flex items-center justify-center pb-12 text-4xl font-extrabold sm:pb-14 sm:text-5xl lg:pb-16 lg:text-6xl text-[#2563eb]"
+          data-aos="flip-right"
+        >
           MY PROJECTS &nbsp;
           <FontAwesomeIcon
             icon={faFileCode}
@@ -46,7 +61,11 @@ function MyProjects() {
         </div>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {ProjectsData.map((item, id) => (
-            <div className="relative font-bold min-h-[24em] group rounded-tl-3xl rounded-br-3xl hover:border-dashed hover:border-2 hover:border-[#2563eb]">
+            <div
+              className="relative font-bold min-h-[24em] group rounded-tl-3xl rounded-br-3xl hover:border-dashed hover:border-2 hover:border-[#2563eb]"
+              key={id}
+              data-aos="flip-up"
+            >
               <div className="flex flex-col items-center justify-center w-full h-full group-hover:shadow-3xl">
                 <img
                   src={item.imgsrc}
