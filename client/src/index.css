@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 .tilt-card:hover,
 .tilt-card div:first-child:hover {
   transform-style: preserve-3d;
