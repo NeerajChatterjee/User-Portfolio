@@ -24,7 +24,7 @@ export default function OtherSkillsContainer() {
           icon={faPen}
           className="hover:text-gray-500 text-[#2563eb] text-2xl xl:text-3xl"
         />
-        <div className="w-full pl-4 duration-1000 hover:translate-x-6 hover:font-bold">
+        <div className="w-full pl-4 duration-1000 hover:translate-x-6 hover:text-black">
           Content Writing
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function OtherSkillsContainer() {
           icon={faBullseye}
           className="hover:text-gray-500 text-[#2563eb] text-2xl xl:text-3xl"
         />
-        <div className="w-full pl-4 duration-1000 hover:translate-x-6 hover:font-bold">
+        <div className="w-full pl-4 duration-1000 hover:translate-x-6 hover:text-black">
           Marketing Skills
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function OtherSkillsContainer() {
           icon={faFireAlt}
           className="hover:text-gray-500 text-[#2563eb] text-2xl xl:text-3xl"
         />
-        <div className="w-full pl-4 duration-1000 hover:translate-x-6 hover:font-bold">
+        <div className="w-full pl-4 duration-1000 hover:translate-x-6 hover:text-black">
           Dancing
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function OtherSkillsContainer() {
           icon={faMicrophoneAlt}
           className="hover:text-gray-500 text-[#2563eb] text-2xl xl:text-3xl"
         />
-        <div className="w-full pl-4 duration-1000 hover:translate-x-6 hover:font-bold">
+        <div className="w-full pl-4 duration-1000 hover:translate-x-6 hover:text-black">
           Motivational speaker
         </div>
       </div>

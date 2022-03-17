@@ -103,7 +103,7 @@ function MyProjects() {
                   </div>
                   <div className="py-2">
                     {item.desc.map((info, id) => (
-                      <div className="flex hover:fill-[#FACA08]">
+                      <div className="flex hover:fill-[#FACA08]" >
                         <span className="mr-2 ">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

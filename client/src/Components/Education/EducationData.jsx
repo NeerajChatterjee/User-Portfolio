@@ -10,7 +10,7 @@ const EducationData = [
     imgsrc: "./images/Education/school.png",
     eName: "John Milton Public School, Agra",
     course: "Intermediate",
-    duration: " May,2018 – July,2019",
+    duration: " May 2018 - July 2019",
     location: "Uttar Pradesh, India",
   },
 ];

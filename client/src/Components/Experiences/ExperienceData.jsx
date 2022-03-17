@@ -21,7 +21,7 @@ const ExperienceData = [
     desc: "I write in the blogs on the official website of Robotics Club MNNIT and social media posts to amplify reach.",
   },
   {
-    title: "CISCO TQB",
+    title: "CISCO tQb",
     imgsrc: "./images/Experience/cisco.jpg",
     pos: "STUDENT BODY",
     date: "January 2022 - Ongoing",
