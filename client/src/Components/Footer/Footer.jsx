@@ -32,7 +32,7 @@ export default function Footer() {
   return (
     <div className="bg-[#111111]">
       <div className="flex flex-col-reverse gap-5 px-4 md:px-14 py-12 md:grid md:grid-cols-3 lg:mt-16 bg-[#111111] select-text justify-around">
-        <div className="flex flex-col justify-center max-w-xl col-span-2 gap-5 mx-auto text-white">
+        <div className="flex flex-col justify-center max-w-xl md:col-span-2 gap-5 mx-auto text-white">
           <div className="flex justify-center text-2xl font-bold md:text-3xl lg:text-4xl 2xl:text-5xl">
             CONTACT ME
           </div>

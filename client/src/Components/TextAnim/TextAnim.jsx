@@ -23,7 +23,7 @@ function TextAnim() {
 
     const [text, settext] = useState("")
     const [index, setindex] = useState(0)
-    // const s = "I AM_AN EXPLORER_AN ADVENTURER_A MOTIVATOR_A DREAMER_AND_AN ACHIEVER";
+    // const s = "I AM_AN EXPLORER_AN ADVENTURER_A MOTIVATOR_A DREAMER_AN ACHIEVER_AND_UNSTOPPABLE";
     const s = "HAPPY_BIRTHDAY_SHRUTI_YOU ARE_VERY SPECIAL_VERY CUTE_AND_YOU ARE_MINE";
     const [isVisible, setisVisible] = useState(false)
     const containerRef = useRef(null)
