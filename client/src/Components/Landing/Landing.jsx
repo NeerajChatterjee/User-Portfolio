@@ -56,12 +56,12 @@ export default function Landing() {
 
   return (
     <>
-      <div className="flex flex-col justify-around w-full h-full bg-[#111111] p-4 md:grid md:grid-cols-2">
+      <div className="flex flex-col justify-around w-full h-full bg-[#111111] p-4 md:grid md:grid-cols-2 min-h-screen">
         {/* <div className="" data-aos="fade-in"> */}
         <img
-          src={process.env.PUBLIC_URL + "./images/Landing/Shruti_web.png"}
+          src={process.env.PUBLIC_URL + "./images/Landing/Shruti_web_2.jpeg"}
           alt="Profile picture"
-          className="object-cover md:hidden rounded-xl"
+          className="object-cover md:hidden rounded-xl h-[50vh]"
         />
         {/* </div> */}
         <div
@@ -115,7 +115,7 @@ export default function Landing() {
           data-aos="fade-in"
         >
           <img
-            src={process.env.PUBLIC_URL + "./images/Landing/Shruti_web.png"}
+            src={process.env.PUBLIC_URL + "./images/Landing/Shruti_web_2.jpeg"}
             alt="Profile picture"
             className="object-cover w-full max-w-xl h-[65%] group-hover:skew-y-6 grayscale group-hover:grayscale-0 transition duration-1000 rounded-xl group-hover:scale-90"
           />
