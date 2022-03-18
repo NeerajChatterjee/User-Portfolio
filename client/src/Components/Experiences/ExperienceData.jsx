@@ -25,7 +25,7 @@ const ExperienceData = [
     imgsrc: "./images/Experience/cisco.jpg",
     pos: "STUDENT BODY",
     date: "January 2022 - Ongoing",
-    desc: "Manage events for CISCO thingQbator.",
+    desc: "I plan and organize various events and workshops of thingQbator for college students.",
   },
 ];
 
